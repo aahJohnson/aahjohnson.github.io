@@ -1,0 +1,102 @@
+/* Baseline */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 1.5rem;
+}
+
+section h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* Index */
+#indexSection ul {
+  list-style: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  text-align: center;
+}
+
+#indexSection li {
+  margin: 1rem;
+}
+
+#indexSection a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #ddd;
+}
