@@ -17,7 +17,11 @@ body {
 
 /* Header */
 header {
-  background-color: #ddd;
+  background-image: url(media/headerBackground.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  color: white;
   padding: 1rem;
   text-align: center;
 }
@@ -37,7 +41,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: white;
 }
 
 nav a:hover {
@@ -68,6 +72,7 @@ img {
   height: auto;
   display: block;
   margin: 0.5rem 0;
+  border-radius: 4px;
 }
 
 /* Index */
@@ -89,14 +94,45 @@ img {
   font-size: 2rem;
 }
 
+/* h4 */
+h4 {
+  margin-top: 1rem;
+}
+
 /* Footer */
 footer {
   position: absolute;
-  bottom: 0;
-  padding: 1rem;
-  margin: 0;
+  margin-bottom: 0vh;
   width: 100%;
+  background-image: url(media/headerBackground.webp);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: none;
+  color: white;
   text-align: center;
-  font-size: 0.8rem;
-  background-color: #ddd;
+  padding: 1rem;
+}
+
+/* Media Query 1 – Minst 600px (t.ex. surfplatta) */
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "bild text";
+  }
+
+  main img {
+    grid-area: bild;
+  }
+
+  main h2,
+  main p {
+    grid-area: text;
+  }
+}
+
+/* Media Query 2 – Minst 900px (desktop) */
+@media (min-width: 900px) {
+  main {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
 }
