@@ -13,6 +13,9 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -20,7 +23,7 @@ header {
   background-image: url(media/headerBackground.webp);
   background-position: center;
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -30,26 +33,32 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 
+/* Nav*/
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
+  justify-content: center;
 }
 
 nav a {
   text-decoration: none;
   color: white;
+  transition: transform 0.3s ease;
 }
 
 nav a:hover {
+  transform: scale(1.1);
   text-decoration: underline;
 }
 
-/* Main */
+/* Main*/
 main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
   max-width: 800px;
   margin: 1rem auto;
   padding: 1rem;
@@ -73,14 +82,19 @@ img {
   display: block;
   margin: 0.5rem 0;
   border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
 }
 
 /* Index */
 #indexSection ul {
   list-style: none;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -101,38 +115,32 @@ h4 {
 
 /* Footer */
 footer {
-  position: absolute;
-  margin-bottom: 0vh;
-  width: 100%;
+  margin-top: auto;
   background-image: url(media/headerBackground.webp);
   background-position: bottom;
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
   color: white;
   text-align: center;
   padding: 1rem;
 }
 
-/* Media Query 1 – Minst 600px (t.ex. surfplatta) */
+/* Media Query 1 – tablet */
 @media (min-width: 600px) {
-  main {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "bild text";
-  }
-
-  main img {
-    grid-area: bild;
-  }
-
-  main h2,
-  main p {
-    grid-area: text;
+  nav ul {
+    justify-content: flex-start;
   }
 }
 
-/* Media Query 2 – Minst 900px (desktop) */
+/* Media Query 2 – desktop */
 @media (min-width: 900px) {
   main {
-    grid-template-columns: 1fr 3fr 1fr;
+    max-width: 1200px;
+    padding: 1rem 5rem;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 2rem;
   }
 }
