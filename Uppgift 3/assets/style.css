@@ -1,0 +1,189 @@
+/* Baseline */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  min-height: 10rem;
+  background-image: url(images/background.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoLink {
+  position: absolute;
+}
+
+.logo {
+  height: 5rem;
+  border-radius: 50%;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+/* Nav */
+nav {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a,
+nav p {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav p {
+  cursor: default;
+  user-select: none;
+}
+
+/* Main */
+main {
+  min-height: 70vh;
+}
+
+main h1 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.mainSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Home */
+.textLeft,
+.textRight {
+  margin-top: 45%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+
+.textLeft {
+  text-align: right;
+}
+
+.textRight {
+  text-align: left;
+}
+
+.homeImage {
+  width: 75%;
+  aspect-ratio: 1/1;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Animals */
+.animal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
+}
+
+.animal img {
+  grid-row-start: 1;
+  grid-row-end: 5;
+  max-height: 20rem;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* About */
+
+/* Contact */
+form {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 0 5rem;
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #000;
+}
+
+form select {
+  padding: 5px;
+}
+
+form button {
+  padding: 1rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  min-width: 25%;
+}
+
+/* Report */
+
+/* Footer */
+footer {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  background-image: url(images/background.webp);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+
+/* Sizes */
